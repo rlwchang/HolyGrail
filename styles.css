@@ -19,7 +19,7 @@ body {
     position: absolute;
     z-index: -1;
     opacity: 0.3;
-    background: url("images/wallpaper_hi.png") top no-repeat;
+    background: url("images/wallpaper_hi.jpg") top no-repeat;
     background-size: cover;
 }
 
