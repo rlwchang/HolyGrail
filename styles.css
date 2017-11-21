@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background: linear-gradient(45deg ,red -50%, black 150%);*/
+    background: black;
+    font-family: Times, Georgia, Serif;
+    color: rgb(200, 200, 200);
+    position: relative;
+}
+
+.background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    background: url("images/wallpaper_hi.png") top no-repeat;
+    background-size: cover;
+}
+
+
+a {
+    color: #faa301;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e88100;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+}
+
+.header {
+    flex-basis: 100px;
+    border: 3px ridge #faa301;
+}
+
+.header__title {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #faa301;
+    text-shadow: 1px 0px 2px black, -1px 0px 1px gray;
+}
+
+.main {
+    display: flex;
+    flex-grow: 1;
+    align-content: stretch;
+    /*max-width: 920px;*/
+    /*flex-wrap: wrap;*/
+    /*flex-basis: 500px;*/
+}
+
+.main__team {
+    margin: 10px 0;
+    border: 3px ridge #faa301;
+}
+
+.main__team__title {
+    display: block;
+    text-align: center;
+}
+
+.main__team--flex {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+
+.main__team--red {
+    color: #d43100;
+    text-shadow: 1px 0px 2px black, -1px 0px 1px gray;
+}
+
+.main__team--black {
+    color: black;
+    text-shadow: 1px 0px 2px #faa301, -1px 0px 1px rgb(40, 40, 40);
+}
+
+.main__display {
+    color: rgb(200, 200, 200);
+    text-shadow: 1px 1px 1px black;
+    display: flex;
+    flex-basis: 800px;
+    flex-grow: 1;
+    margin: 10px;
+    border: 3px ridge #faa301;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+.main__display__image {
+    max-width: 200px;
+    align-self: center;
+    transition: transform 0.5s ease-out, opacity 0.3s ease-out;
+    transform: scale(1) translateX(0);
+    opacity: 1;
+
+}
+
+.main__display__image--invisible {
+    transform: scale(1.2) translateX(-100px);
+    opacity: 0;
+}
+
+.main__display__content {
+    margin: 10px;
+}
+
+.main__display__title {
+    transition: opacity 0.3s ease-out;
+    text-align: center;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.main__display__title--invisible {
+    opacity: 0;
+}
+
+.main__display__class {
+    transition: opacity 0.3s ease-out;
+    text-align: center;
+    opacity: 1;
+    margin-bottom: 8px;
+}
+
+.main__display__class--invisible {
+    opacity: 0;
+}
+
+.main__display__description {
+    font-family: Calibri, Arial, sans-serif;
+    transition: opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.main__display__description--invisible {
+    opacity: 0;
+}
+
+.char__icon {
+    flex-shrink: 1;
+    flex-basis: 4.5rem;
+    height: 4.5rem;
+    margin: 0.75rem;
+    border: 3px outset white;
+    box-shadow: 1px 1px 2px black, -1px -1px 1px #faa301;
+}
+
+.char__icon--red {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.char__icon--black {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.char__icon--active {
+    border-color: #faa301;
+}
+
+.char__icon:hover {
+    opacity: 0.5;
+    background-color: black;
+}
+
+.char__icon img {
+    height: 100%;
+}
+
+.footer {
+    flex-basis: 100px;
+    border: 3px ridge #faa301;
+    position: relative;
+}
+
+.footer__content {
+    font-family: Calibri, Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 920px) {
+    .background {
+        background-image: url("images/wallpaper.jpg");
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+    .main__display {
+        margin: 10px 0;
+        order: -1;
+        flex-basis: 400px;
+        border: 3px ridge #faa301;
+    }
+
+    .main__team--red {
+        margin-top: 0;
+    }
+
+    .main__team--black {
+        margin-top: 0;
+    }
+}
